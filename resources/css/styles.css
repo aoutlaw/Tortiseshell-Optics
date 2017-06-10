@@ -4,31 +4,185 @@ body {
 	font-size: 18px;
 	line-height: 1.4;
 	}
-.container {width: 960px;}
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	}
 .white {color: white;}
 .uppercase {text-transform: uppercase;}
+
+.mobile {display: none;}
 
 
 /*********** HEADER ***********/
 header {
 	height: 30rem;
 	padding-top: 1rem;
-	background-image: url('../images/glasses-bg.png')
+	background-image: url('../images/glasses-bg.png');
+	background-size: cover;
+	background-position: center center;
+	}
+nav {
+	padding: 1rem 0;
+	background-color: cadetblue;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	}
+.logoblock {
+	margin-left: 2rem;
+	display: flex;
+	align-items: center;
+	}
+	.logoblock img {
+		height: 1.5rem;
+		padding-right: 1rem;
+		}
+	.logoblock h4 {
+		font-size: 1rem;
+		}
+.menu { }
+
+.menu li {
+	display: inline-block;
+	padding-right: 2rem;
+	}
+
+.hero {
+	display: flex;
+	justify-content: flex-end;
+	align-content: flex-end;
+	}
+.banner {
+	margin-top: 10rem;
+	margin-right: -2rem;
+	padding: 1.5rem 5rem;
+	background-color: white;
+	}
+	.banner h1 {
+		margin: 0.5rem 0;	
+		font-size: 2rem;
+		font-weight: bold;
+		line-height: 1.2;
+		}
+
+
+/*********** ICONS ***********/
+.icons {
+	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+	}
+
+.icon {
+	width: 5rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 3rem;
+	}
+	.icon.truck img,
+	.icon.ruler img {width: 5rem;}
+	.icon.paper img {width: 3.5rem;}
+
+
+/*********** CONTENT ***********/
+.items {
+	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+	}
+	.items h2 {
+		font-size: 1rem;
+		font-weight: bold;
+		}
+	.items p {
+		padding-top:1rem;
+		}
+	.items .item {
+		width: 35%;
+		}
+		.item:first-child {
+			margin-right: 5%;
+			}
+	.items .item-title {
+		width: 10rem;
+		background-color: cadetblue;
+		padding: 0.5rem 1.25rem;
+		}
+
+
+/*********** FOOTER ***********/
+footer {
+	background-color: azure;
+	display: flex;
+	align-items: center;
+	padding: 4rem;
+	margin-top: 5rem;
+	}
+	footer img {
+		height: 1.5rem;
+		margin-right: 1rem;
+		}
+
+
+
+
+/*********** TABLET SPECIFIC ***********/
+@media only screen and (max-width: 1024px) {
+	
+	/* GLOBAL */
+	.container {max-width: 100%;}
+
+	/* HEADER */
+	header {
+		height: 22rem;
+		padding-top: 0;
+		}
+	.banner {
+		margin-top: 5rem;
+		margin-right: 2rem;
+		padding: 0.75rem 4rem;
+		}
+		.banner h1 {
+			margin: 0.5rem 0;	
+			font-size: 1.33rem;
+			}
+	}
+
+
+/*********** MOBILE SPECIFIC ***********/
+@media only screen and (max-width: 470px) {
+
+	/* GLOBAL */
+	.desktop {display: none;}
+	.mobile {display: block;}
+
+	/* HEADER */
+	.logoblock h4 {display: none;}
+
+	header {
+		height: 17rem;
+		background-position: 20%
+		}
+	.hero {
+		display: block;
+		}
+	.banner {
+		margin-top: 9rem;
+		margin-right: 0;
+		padding: 1rem 0;
+		}
+		.banner h1 {
+			margin: 0;
+			font-size: 1rem;
+			text-align: center;
+		}
+
 }
 
 
 
-
-/*********** ICONS ***********/
-
-
-
-
-
-/*********** CONTENT ***********/
-
-
-
-
-
-/*********** FOOTER ***********/
