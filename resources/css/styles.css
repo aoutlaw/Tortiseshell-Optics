@@ -1,9 +1,10 @@
 /*********** GLOBAL STYLES ***********/
-body {
+html {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.4;
 	}
+body {line-height: 1.4;}
+
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -151,19 +152,21 @@ footer {
 			margin: 0.5rem 0;	
 			font-size: 1.33rem;
 			}
+
 	}
 
 
 /*********** MOBILE SPECIFIC ***********/
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 620px) {
 
 	/* GLOBAL */
 	.desktop {display: none;}
 	.mobile {display: block;}
 
 	/* HEADER */
-	.logoblock h4 {display: none;}
-
+	.logoblock h4 {
+		display: none;
+		}
 	header {
 		height: 17rem;
 		background-position: 20%
@@ -180,9 +183,51 @@ footer {
 			margin: 0;
 			font-size: 1rem;
 			text-align: center;
+			}
+	
+	/* ICONS */
+	.icons {
+		margin-top: 3.77rem;
+		flex-direction: column;
+		align-items: center;
 		}
+	.icon {
+	    height: auto;
+	    justify-content: flex-start;
+		}
+		.icon:nth-child(2) {
+			margin: 1.54rem 3rem;
+			}
+		.icon h3 {
+			padding-top: 1rem;
+			font-size: 0.77rem;
+			}
 
-}
+	/* CONTENT */
+	.items {
+		margin-top: 3.77rem;
+		flex-direction: column;
+		align-items: center;
+		}
+		.items p {
+			padding: 1rem 2% 0 2%;
+			font-size: 0.77rem;
+			}
+		.items .item {
+			width: 100%;
+			}
+			.item:first-child {margin-right: 0;}
+			.item:last-child {margin-top: 4rem;}
+		.items .item-title {
+			width: 100%;
+			text-align: center;
+			}
+
+	/* FOOTER */
+	footer {justify-content: center;}
+	footer p {display: none;}
+
+	}
 
 
 
